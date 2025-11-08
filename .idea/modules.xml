@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/alipay_plus-biz-shared/alipay_plus-biz-shared.iml" filepath="$PROJECT_DIR$/alipay_plus-biz-shared/alipay_plus-biz-shared.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/common/alipay_plus-common-util/alipay_plus-common-util.iml" filepath="$PROJECT_DIR$/app/common/alipay_plus-common-util/alipay_plus-common-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test2.iml" filepath="$PROJECT_DIR$/test2.iml" />
     </modules>
   </component>
 </project>

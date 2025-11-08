@@ -1,0 +1,79 @@
+package com.alipay.alipay_plus.biz.service.impl.template;
+
+import com.alipay.alipay_plus.biz.service.impl.helper.IdigitalriskResultHelper;
+import com.alipay.alipay_plus.common.service.facade.LogUtil;
+import com.alipay.alipay_plus.common.service.facade.baseresult.*;
+import com.alipay.alipay_plus.common.service.facade.constant.LoggerConstant;
+import com.alipay.alipay_plus.common.service.facade.enums.IdigitalriskResultCode;
+import com.alipay.alipay_plus.core.model.enums.IdigitalriskActionEnum;
+import com.alipay.alipay_plus.core.model.exception.IdigitalriskException;
+
+import jdk.jpackage.internal.Log;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.naming.event.EventContext;
+
+
+public class IdigitalriskServiceTemplate {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(LoggerConstant.RISK_BIZ_SERVICE_LOG);
+
+    /**
+     * execute
+     *
+     * @param request digital risk request
+     * @param action digital risk action
+     * @param callback digital risk biz callback
+     * @return digital risk result
+     */
+    public <T extends IdigitalriskBaseRequest, R extends IdigitalriskBaseResult> R execute(
+            final T request,
+            final IdigitalriskActionEnum action,
+            final IdigitalriskBizCallback<T, R> callback) {
+
+        R result = callback.createDefaultResponse();
+
+        Log.info("start biz service");
+
+        try {
+            callback.checkParams(request);
+
+            initContext(action, request);
+
+            callback.process(request, result);
+
+            IdigitalriskResultHelper.fillSuccessResultCode(result);
+
+        } catch (IdigitalriskException e) {
+
+            LogUtil.warn(LOGGER, e, "service process exception[", request, "]", ", code = "
+                    , e.getResultCode(), ", msg= ", e.getMessage());
+
+            IdigitalriskResultHelper.fillExceptionResultCode(result, e.getResultCode());
+
+        } catch (Throwable e) {
+            LogUtil.error(LOGGER, e, "service process unexpected exception[", request, "]");
+
+            IdigitalriskResultHelper.fillExceptionResultCode(result, IdigitalriskResultCode.SYSTEM_EXCEPTION);
+
+        } finally {
+            printDigestLog(result);
+
+            LogUtil.info(LOGGER, "service result[" , result , "] [request =", request, "]" );
+
+            IdigitalriskContextHolder.clear();
+        }
+
+
+        return result;
+    }
+
+    private <T extends IdigitalriskBaseRequest> void initContext(IdigitalriskActionEnum action, T request) {
+        EventContext context = TenantUtil.getCurrentEventContext();
+        eventContext.setTntInstId(IpayTenantEnum.IPAY_SG.getTntInstId());
+        TenantUtil.setCurrentEventContext(eventContext);
+        IgititalriskContextHolder.set(action, slipExtraDAO)
+
+    }
+}

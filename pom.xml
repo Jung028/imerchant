@@ -36,6 +36,7 @@
             <artifactId>spring-context</artifactId>
             <version>6.2.1</version>
         </dependency>
+
     </dependencies>
 
 </project>
