@@ -1,4 +1,4 @@
-package com.alipay.alipay_plus.common.service.facade;
+package com.alipay.alipay_plus.common.util;
 
 import com.alipay.alipay_plus.common.service.facade.baseresult.IdigitalriskBaseRequest;
 import com.alipay.alipay_plus.common.service.facade.baseresult.IdigitalriskBaseResult;

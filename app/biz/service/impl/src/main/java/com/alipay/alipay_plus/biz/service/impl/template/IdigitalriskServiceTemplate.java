@@ -1,23 +1,31 @@
 package com.alipay.alipay_plus.biz.service.impl.template;
 
 import com.alipay.alipay_plus.biz.service.impl.helper.IdigitalriskResultHelper;
-import com.alipay.alipay_plus.common.service.facade.LogUtil;
+import com.alipay.alipay_plus.common.util.LogUtil;
 import com.alipay.alipay_plus.common.service.facade.baseresult.*;
 import com.alipay.alipay_plus.common.service.facade.constant.LoggerConstant;
 import com.alipay.alipay_plus.common.service.facade.enums.IdigitalriskResultCode;
+import com.alipay.alipay_plus.common.util.TenantUtil;
+import com.alipay.alipay_plus.common.util.enums.IpayTenantEnum;
+import com.alipay.alipay_plus.core.model.context.IdigitalriskContextHolder;
 import com.alipay.alipay_plus.core.model.enums.IdigitalriskActionEnum;
 import com.alipay.alipay_plus.core.model.exception.IdigitalriskException;
+import com.alipay.alipay_plus.common.util.EventContext;
 
 import jdk.jpackage.internal.Log;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import javax.naming.event.EventContext;
 
 
 public class IdigitalriskServiceTemplate {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(LoggerConstant.RISK_BIZ_SERVICE_LOG);
+
+    /**
+     * slipExtraDAO
+     */
+    protected SlipExtraDAO slipExtraDAO;
 
     /**
      * execute
@@ -69,11 +77,14 @@ public class IdigitalriskServiceTemplate {
         return result;
     }
 
-    private <T extends IdigitalriskBaseRequest> void initContext(IdigitalriskActionEnum action, T request) {
+    private <R extends IdigitalriskBaseResult> void printDigestLog(R result) {
+    }
+
+    private <T extends IdigitalriskBaseRequest, R extends IdigitalriskBaseResult> void initContext(IdigitalriskActionEnum action, T request) {
         EventContext context = TenantUtil.getCurrentEventContext();
-        eventContext.setTntInstId(IpayTenantEnum.IPAY_SG.getTntInstId());
-        TenantUtil.setCurrentEventContext(eventContext);
-        IgititalriskContextHolder.set(action, slipExtraDAO)
+        context.setTntInstId(IpayTenantEnum.IPAY_SG.getTntInstId());
+        TenantUtil.setCurrentEventContext(context);
+        IdigitalriskContextHolder.set(action, slipExtraDAO.updateAndGetSystemDate(),request.getOperatorId(), request.getOperatorName());
 
     }
 }
