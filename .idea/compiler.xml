@@ -26,4 +26,19 @@
       <module name="web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="alipay_plus-biz-service-impl" options="-parameters" />
+      <module name="alipay_plus-biz-shared" options="-parameters" />
+      <module name="alipay_plus-bootstrap" options="-parameters" />
+      <module name="alipay_plus-common-dal" options="-parameters" />
+      <module name="alipay_plus-common-service-facade" options="-parameters" />
+      <module name="alipay_plus-common-service-integration" options="-parameters" />
+      <module name="alipay_plus-common-util" options="-parameters" />
+      <module name="alipay_plus-core-model" options="-parameters" />
+      <module name="alipay_plus-core-service" options="-parameters" />
+      <module name="alipay_plus-test" options="-parameters" />
+      <module name="alipay_plus-web" options="-parameters" />
+    </option>
+  </component>
 </project>

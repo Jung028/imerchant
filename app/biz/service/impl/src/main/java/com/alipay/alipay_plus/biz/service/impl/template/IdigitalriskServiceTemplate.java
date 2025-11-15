@@ -1,8 +1,9 @@
 package com.alipay.alipay_plus.biz.service.impl.template;
 
 import com.alipay.alipay_plus.biz.service.impl.helper.IdigitalriskResultHelper;
+import com.alipay.alipay_plus.common.service.facade.baseresult.IdigitalriskBaseRequest;
+import com.alipay.alipay_plus.common.service.facade.baseresult.IdigitalriskBaseResult;
 import com.alipay.alipay_plus.common.util.LogUtil;
-import com.alipay.alipay_plus.common.service.facade.baseresult.*;
 import com.alipay.alipay_plus.common.service.facade.constant.LoggerConstant;
 import com.alipay.alipay_plus.common.service.facade.enums.IdigitalriskResultCode;
 import com.alipay.alipay_plus.common.util.TenantUtil;
@@ -12,7 +13,6 @@ import com.alipay.alipay_plus.core.model.enums.IdigitalriskActionEnum;
 import com.alipay.alipay_plus.core.model.exception.IdigitalriskException;
 import com.alipay.alipay_plus.common.util.EventContext;
 
-import jdk.jpackage.internal.Log;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,7 +25,7 @@ public class IdigitalriskServiceTemplate {
     /**
      * slipExtraDAO
      */
-    protected SlipExtraDAO slipExtraDAO;
+    //protected SlipExtraDAO slipExtraDAO;
 
     /**
      * execute
@@ -42,7 +42,7 @@ public class IdigitalriskServiceTemplate {
 
         R result = callback.createDefaultResponse();
 
-        Log.info("start biz service");
+        LogUtil.info(LOGGER, "service request[", request, "]");
 
         try {
             callback.checkParams(request);
@@ -84,7 +84,7 @@ public class IdigitalriskServiceTemplate {
         EventContext context = TenantUtil.getCurrentEventContext();
         context.setTntInstId(IpayTenantEnum.IPAY_SG.getTntInstId());
         TenantUtil.setCurrentEventContext(context);
-        IdigitalriskContextHolder.set(action, slipExtraDAO.updateAndGetSystemDate(),request.getOperatorId(), request.getOperatorName());
+       // IdigitalriskContextHolder.set(action, slipExtraDAO.updateAndGetSystemDate(),request.getOperatorId(), request.getOperatorName());
 
     }
 }

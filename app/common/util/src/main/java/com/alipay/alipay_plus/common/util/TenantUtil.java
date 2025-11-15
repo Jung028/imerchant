@@ -1,5 +1,6 @@
 package com.alipay.alipay_plus.common.util;
 
+import com.alipay.alipay_plus.common.util.enums.IpayTenantEnum;
 import io.micrometer.common.util.StringUtils;
 
 

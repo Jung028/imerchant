@@ -1,1 +1,5 @@
-org/adam/Main.class
+com/alipay/alipay_plus/common/util/TenantUtil.class
+com/alipay/alipay_plus/common/util/enums/IpayTenantEnum.class
+com/alipay/alipay_plus/common/util/EventContextUtil.class
+com/alipay/alipay_plus/common/util/EventContext.class
+com/alipay/alipay_plus/common/util/LogUtil.class

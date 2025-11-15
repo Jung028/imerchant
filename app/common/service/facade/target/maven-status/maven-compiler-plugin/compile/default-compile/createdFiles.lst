@@ -1,1 +1,11 @@
-org/adam/Main.class
+com/alipay/alipay_plus/common/service/facade/constant/LoggerConstant.class
+com/alipay/alipay_plus/common/service/facade/enums/GlobalResultCodes.class
+com/alipay/alipay_plus/common/service/facade/baseresult/RiskBizResult.class
+com/alipay/alipay_plus/common/service/facade/enums/ErrorCodeConstants.class
+com/alipay/alipay_plus/common/service/facade/baseresult/IdigitalriskBaseResult.class
+com/alipay/alipay_plus/common/service/facade/enums/IdigitalriskBizType.class
+com/alipay/alipay_plus/common/service/facade/enums/ResultCodeType.class
+com/alipay/alipay_plus/common/service/facade/baseresult/IdigitalriskBaseRequest.class
+com/alipay/alipay_plus/common/service/facade/enums/IdigitalriskResultCode.class
+com/alipay/alipay_plus/common/service/facade/enums/ResultCodeLevel.class
+com/alipay/alipay_plus/common/service/facade/enums/SystemCode.class

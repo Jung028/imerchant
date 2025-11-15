@@ -1,1 +1,4 @@
-org/adam/Main.class
+com/alipay/alipay_plus/core/model/exception/IdigitalriskException.class
+com/alipay/alipay_plus/core/model/context/IdigitalriskContext.class
+com/alipay/alipay_plus/core/model/context/IdigitalriskContextHolder.class
+com/alipay/alipay_plus/core/model/enums/IdigitalriskActionEnum.class

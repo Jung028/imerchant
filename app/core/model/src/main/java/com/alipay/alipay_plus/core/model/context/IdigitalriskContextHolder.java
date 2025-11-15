@@ -15,4 +15,8 @@ public final class IdigitalriskContextHolder {
     public static void set(IdigitalriskActionEnum action, Date time, String operatorId, String operatorName) {
         set(new IdigitalriskContext(action, time, operatorId, operatorName));
     }
+
+    public static void clear() {
+        contextLocal.remove();
+    }
 }

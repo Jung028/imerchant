@@ -14,6 +14,6 @@ public class EventContextUtil {
     }
 
     public static void setTenantId(String tenantId) {
-        this.tenantId = tenantId;
+        EventContextUtil.tenantId = tenantId;
     }
 }

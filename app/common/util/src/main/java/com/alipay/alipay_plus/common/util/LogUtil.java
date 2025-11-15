@@ -70,4 +70,15 @@ public class LogUtil {
             logger.error(logBuilder.toString(), e);
         }
     }
+
+    public static <T extends IdigitalriskBaseRequest> void info(Logger logger, String s, T request, String s1) {
+        if (logger.isInfoEnabled()) {
+            StringBuilder logBuilder = new StringBuilder();
+            logBuilder.append(s)
+                    .append(LEFT_TAG)
+                    .append(request)
+                    .append(RIGHT_TAG);
+            logger.info(logBuilder.toString());
+        }
+    }
 }

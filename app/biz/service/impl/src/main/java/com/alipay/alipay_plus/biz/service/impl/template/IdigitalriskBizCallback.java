@@ -1,6 +1,7 @@
 package com.alipay.alipay_plus.biz.service.impl.template;
 
-import com.alipay.alipay_plus.common.service.facade.baseresult.*;
+import com.alipay.alipay_plus.common.service.facade.baseresult.IdigitalriskBaseRequest;
+import com.alipay.alipay_plus.common.service.facade.baseresult.IdigitalriskBaseResult;
 
 public abstract class IdigitalriskBizCallback<T extends IdigitalriskBaseRequest, R extends IdigitalriskBaseResult>{
 

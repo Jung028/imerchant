@@ -1,6 +1,7 @@
-/Users/jung/Downloads/alipay_plus/app/biz/service/impl/src/main/java/com.alipay.learning.biz.service.impl/rpc/RpcConsumerConfiguration.java
-/Users/jung/Downloads/alipay_plus/app/biz/service/impl/src/main/java/com.alipay.learning.biz.service.impl/rpc/RpcSampleController.java
-/Users/jung/Downloads/alipay_plus/app/biz/service/impl/src/main/java/com.alipay.learning.biz.service.impl/rpc/SampleServiceImpl.java
-/Users/jung/Downloads/alipay_plus/app/biz/service/impl/src/main/java/com.alipay.learning.biz.service.impl/template/IdigitalriskBizCallback.java
-/Users/jung/Downloads/alipay_plus/app/biz/service/impl/src/main/java/com.alipay.learning.biz.service.impl/template/IdigitalriskServiceTemplate.java
-/Users/jung/Downloads/alipay_plus/app/biz/service/impl/src/main/java/org/adam/Main.java
+/Users/jung/Downloads/alipay_plus/app/biz/service/impl/src/main/java/com/alipay/alipay_plus/biz/service/impl/helper/IdigitalriskResultHelper.java
+/Users/jung/Downloads/alipay_plus/app/biz/service/impl/src/main/java/com/alipay/alipay_plus/biz/service/impl/idigitalrisk/SampleService.java
+/Users/jung/Downloads/alipay_plus/app/biz/service/impl/src/main/java/com/alipay/alipay_plus/biz/service/impl/rpc/RpcConsumerConfiguration.java
+/Users/jung/Downloads/alipay_plus/app/biz/service/impl/src/main/java/com/alipay/alipay_plus/biz/service/impl/rpc/RpcSampleController.java
+/Users/jung/Downloads/alipay_plus/app/biz/service/impl/src/main/java/com/alipay/alipay_plus/biz/service/impl/rpc/SampleServiceImpl.java
+/Users/jung/Downloads/alipay_plus/app/biz/service/impl/src/main/java/com/alipay/alipay_plus/biz/service/impl/template/IdigitalriskBizCallback.java
+/Users/jung/Downloads/alipay_plus/app/biz/service/impl/src/main/java/com/alipay/alipay_plus/biz/service/impl/template/IdigitalriskServiceTemplate.java
