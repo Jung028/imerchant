@@ -11,6 +11,7 @@
         <module name="alipay_plus-biz-shared" />
         <module name="alipay_plus-core-model" />
         <module name="alipay_plus-bootstrap" />
+        <module name="mybatis" />
         <module name="alipay_plus-common-service-facade" />
         <module name="alipay_plus-common-service-integration" />
         <module name="alipay_plus-biz-service-impl" />
@@ -21,6 +22,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="alipay-biz-service-impl" target="1.8" />
+      <module name="alipay_plus-idalgen" target="1.8" />
       <module name="bootstrap" target="1.8" />
       <module name="test" target="1.8" />
       <module name="web" target="1.8" />
@@ -39,6 +41,7 @@
       <module name="alipay_plus-core-service" options="-parameters" />
       <module name="alipay_plus-test" options="-parameters" />
       <module name="alipay_plus-web" options="-parameters" />
+      <module name="mybatis" options="-parameters" />
     </option>
   </component>
 </project>

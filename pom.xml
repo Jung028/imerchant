@@ -22,6 +22,7 @@
         <module>app/biz/service/impl</module>
         <module>app/core/model</module>
         <module>app/core/service</module>
+        <module>mybatis</module>
 
 
     </modules>
@@ -61,17 +62,14 @@
             <version>3.3.2</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.6.0</version>
-        </dependency>
         <!-- MyBatis -->
         <dependency>
-            <groupId>org.mybatis</groupId>
-            <artifactId>mybatis</artifactId>
-            <version>3.5.13</version>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>3.0.5</version>
+            <scope>test</scope>
         </dependency>
+        <!-- MyBatis -->
 
         <!-- PostgreSQL JDBC -->
         <dependency>
@@ -82,5 +80,22 @@
 
 
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-maven-plugin</artifactId>
+                <version>1.4.1</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.postgresql</groupId>
+                        <artifactId>postgresql</artifactId>
+                        <version>42.7.3</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

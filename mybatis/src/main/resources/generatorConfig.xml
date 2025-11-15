@@ -1,0 +1,32 @@
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "https://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="alipay" targetRuntime="MyBatis3">
+
+        <!-- JDBC connection -->
+        <jdbcConnection
+                driverClass="org.postgresql.Driver"
+                connectionURL="jdbc:postgresql://localhost:5433/test"
+                userId="postgres"
+                password="1234" />
+
+        <!-- Java Model (DO) generation -->
+        <javaModelGenerator
+                targetProject="java"/>
+
+        <!-- Mapper XML generation -->
+        <sqlMapGenerator
+                targetProject="resources"/>
+
+        <!-- Mapper interface generation -->
+        <javaClientGenerator
+                type="XMLMAPPER"
+                targetProject="daointerface"/>
+
+        <!-- Table(s) to generate -->
+        <table tableName="test" domainObjectName="test" />
+
+    </context>
+</generatorConfiguration>

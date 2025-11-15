@@ -25,6 +25,13 @@ public enum IdigitalriskResultCode {
 
     private final String description;
 
+    public String getCode() {
+        return code;
+    }
+    public String getDescription() {
+        return description;
+    }
+
     IdigitalriskResultCode(String code, String description) {
         this.code = code;
         this.description = description;

@@ -13,6 +13,10 @@ public class IdigitalriskException extends RuntimeException {
     this.resultCode = resultCode;
   }
 
+  public IdigitalriskException(IdigitalriskResultCode resultCode) {
+    this(resultCode, resultCode.getDescription());
+  }
+
   public IdigitalriskResultCode getResultCode() {
     return resultCode;
   }
