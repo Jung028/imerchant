@@ -10,6 +10,5 @@ public class IdigitalriskResultHelper {
     }
 
     public static <R extends IdigitalriskBaseResult> void fillSuccessResultCode(R result) {
-
     }
 }
