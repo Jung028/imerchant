@@ -7,23 +7,45 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="alipay_plus-common-dal" />
-        <module name="alipay_plus-web" />
         <module name="alipay_plus-biz-shared" />
-        <module name="alipay_plus-core-model" />
+        <module name="imerchant-bootstrap" />
         <module name="alipay_plus-bootstrap" />
-        <module name="mybatis" />
+        <module name="imerchant-test" />
+        <module name="alipay_plus-common-util" />
+        <module name="alipay_plus-test" />
+        <module name="imerchant-biz-service-impl" />
+        <module name="imerchant-common-service-integration" />
+        <module name="alipay_plus-web" />
+        <module name="imerchant-web" />
+        <module name="imerchant-biz-shared" />
+        <module name="imerchant-common-dal" />
+        <module name="alipay_plus-core-model" />
+        <module name="imerchant-core-model" />
         <module name="alipay_plus-common-service-facade" />
         <module name="alipay_plus-common-service-integration" />
         <module name="alipay_plus-biz-service-impl" />
+        <module name="imerchant-common-service-facade" />
         <module name="alipay_plus-core-service" />
-        <module name="alipay_plus-common-util" />
-        <module name="alipay_plus-test" />
+        <module name="imerchant-core-service" />
+        <module name="imerchant-common-util" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="account_center-biz-service-impl (2)" target="17" />
+      <module name="account_center-biz-shared (2)" target="17" />
+      <module name="account_center-bootstrap (2)" target="17" />
+      <module name="account_center-common-dal (2)" target="17" />
+      <module name="account_center-common-service-facade (2)" target="17" />
+      <module name="account_center-common-service-integration (2)" target="17" />
+      <module name="account_center-common-util (2)" target="17" />
+      <module name="account_center-core-model (2)" target="17" />
+      <module name="account_center-core-service (2)" target="17" />
+      <module name="account_center-test (2)" target="17" />
+      <module name="account_center-web (2)" target="17" />
       <module name="alipay-biz-service-impl" target="1.8" />
       <module name="alipay_plus-idalgen" target="1.8" />
       <module name="bootstrap" target="1.8" />
+      <module name="mybatis" target="17" />
       <module name="test" target="1.8" />
       <module name="web" target="1.8" />
     </bytecodeTargetLevel>
@@ -41,6 +63,17 @@
       <module name="alipay_plus-core-service" options="-parameters" />
       <module name="alipay_plus-test" options="-parameters" />
       <module name="alipay_plus-web" options="-parameters" />
+      <module name="imerchant-biz-service-impl" options="-parameters" />
+      <module name="imerchant-biz-shared" options="-parameters" />
+      <module name="imerchant-bootstrap" options="-parameters" />
+      <module name="imerchant-common-dal" options="-parameters" />
+      <module name="imerchant-common-service-facade" options="-parameters" />
+      <module name="imerchant-common-service-integration" options="-parameters" />
+      <module name="imerchant-common-util" options="-parameters" />
+      <module name="imerchant-core-model" options="-parameters" />
+      <module name="imerchant-core-service" options="-parameters" />
+      <module name="imerchant-test" options="-parameters" />
+      <module name="imerchant-web" options="-parameters" />
       <module name="mybatis" options="-parameters" />
     </option>
   </component>
