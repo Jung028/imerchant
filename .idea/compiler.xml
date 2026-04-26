@@ -6,17 +6,28 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="merchant-web" />
         <module name="imerchant-bootstrap" />
-        <module name="imerchant-biz-service-impl" />
-        <module name="imerchant-web" />
-        <module name="imerchant-common-service-facade" />
-        <module name="imerchant-common-util" />
+        <module name="merchant-common-service-facade" />
+        <module name="merchant-common-util" />
+        <module name="merchant-common-service-integration" />
+        <module name="merchant-biz-service-impl" />
+        <module name="merchant-common-dal" />
+        <module name="merchant-biz-shared" />
         <module name="imerchant-test" />
+        <module name="imerchant-biz-service-impl" />
+        <module name="merchant-core-service" />
         <module name="imerchant-common-service-integration" />
+        <module name="imerchant-web" />
         <module name="imerchant-biz-shared" />
         <module name="imerchant-common-dal" />
         <module name="imerchant-core-model" />
+        <module name="merchant-test" />
+        <module name="imerchant-common-service-facade" />
+        <module name="merchant-bootstrap" />
+        <module name="imerchant-common-util" />
         <module name="imerchant-core-service" />
+        <module name="merchant-core-model" />
       </profile>
     </annotationProcessing>
   </component>
@@ -33,6 +44,17 @@
       <module name="imerchant-core-service" options="-parameters" />
       <module name="imerchant-test" options="-parameters" />
       <module name="imerchant-web" options="-parameters" />
+      <module name="merchant-biz-service-impl" options="-parameters" />
+      <module name="merchant-biz-shared" options="-parameters" />
+      <module name="merchant-bootstrap" options="-parameters" />
+      <module name="merchant-common-dal" options="-parameters" />
+      <module name="merchant-common-service-facade" options="-parameters" />
+      <module name="merchant-common-service-integration" options="-parameters" />
+      <module name="merchant-common-util" options="-parameters" />
+      <module name="merchant-core-model" options="-parameters" />
+      <module name="merchant-core-service" options="-parameters" />
+      <module name="merchant-test" options="-parameters" />
+      <module name="merchant-web" options="-parameters" />
       <module name="mybatis" options="-parameters" />
     </option>
   </component>

@@ -1,6 +1,11 @@
 package com.alipay.merchant.core.service;
 
+import com.alipay.merchant.common.dal.auto.custom.MerchantInfoDAO;
+import com.alipay.merchant.common.dal.auto.dataobject.MerchantInfoDO;
+import com.alipay.merchant.core.model.convertor.MerchantInfoConvertor;
 import com.alipay.merchant.core.model.domain.MerchantInfo;
+import com.alipay.merchant.core.model.exception.RepositoryException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -10,8 +15,19 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class MerchantInfoRepositoryImpl implements MerchantInfoRepository {
 
+    @Autowired
+    private MerchantInfoDAO merchantInfoDAO;
+
     @Override
     public MerchantInfo queryMerchantInfo(String merchantId) {
-        return null;
+        try {
+            MerchantInfoDO merchantInfoDO = merchantInfoDAO.queryMerchantInfo(merchantId);
+            if (merchantInfoDO == null) {
+                throw new RepositoryException("MerchantInfoDO is null");
+            }
+            return MerchantInfoConvertor.convertToModel(merchantInfoDO);
+        } catch (RepositoryException e) {
+            throw new RepositoryException(e.getMessage());
+        }
     }
 }
