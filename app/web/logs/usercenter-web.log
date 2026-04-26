@@ -1,0 +1,13 @@
+2026-04-26 13:07:23 INFO  traceId= com.alipay.merchant.web.Main - Starting Main using Java 21.0.9 with PID 2813 (/Users/adam/IdeaProjects/imerchant/app/web/target/classes started by adam in /Users/adam/IdeaProjects/imerchant/app/web)
+2026-04-26 13:07:23 INFO  traceId= com.alipay.merchant.web.Main - No active profile set, falling back to 1 default profile: "default"
+2026-04-26 13:07:23 WARN  traceId= org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.alipay.merchant.common.dal.auto.custom]' package. Please check your configuration.
+2026-04-26 13:07:23 WARN  traceId= org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'asyncInitMethodManager' of type [com.alipay.sofa.runtime.async.AsyncInitMethodManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [asyncProxyBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-04-26 13:07:23 INFO  traceId= org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8181 (http)
+2026-04-26 13:07:23 INFO  traceId= org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-8181"]
+2026-04-26 13:07:23 INFO  traceId= org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-26 13:07:23 INFO  traceId= org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-04-26 13:07:23 INFO  traceId= org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-26 13:07:23 INFO  traceId= org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 381 ms
+2026-04-26 13:07:24 INFO  traceId= org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-8181"]
+2026-04-26 13:07:24 INFO  traceId= org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8181 (http) with context path '/'
+2026-04-26 13:07:24 INFO  traceId= com.alipay.merchant.web.Main - Started Main in 6.049 seconds (process running for 6.249)

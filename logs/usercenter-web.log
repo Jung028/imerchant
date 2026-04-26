@@ -1,0 +1,89 @@
+2026-04-25 19:42:45 INFO  traceId= com.alipay.merchant.web.Main - Starting Main using Java 21.0.9 with PID 90536 (/Users/adam/IdeaProjects/imerchant/app/web/target/classes started by adam in /Users/adam/IdeaProjects/imerchant)
+2026-04-25 19:42:45 INFO  traceId= com.alipay.merchant.web.Main - No active profile set, falling back to 1 default profile: "default"
+2026-04-25 19:42:45 WARN  traceId= org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.alipay.merchant.common.dal.auto.custom]' package. Please check your configuration.
+2026-04-25 19:42:45 WARN  traceId= org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'asyncInitMethodManager' of type [com.alipay.sofa.runtime.async.AsyncInitMethodManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [asyncProxyBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-04-25 19:42:45 INFO  traceId= org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8181 (http)
+2026-04-25 19:42:45 INFO  traceId= org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-8181"]
+2026-04-25 19:42:45 INFO  traceId= org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-25 19:42:45 INFO  traceId= org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-04-25 19:42:45 INFO  traceId= org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-25 19:42:45 INFO  traceId= org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 420 ms
+2026-04-25 19:42:45 WARN  traceId= org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'merchantController': Unsatisfied dependency expressed through field 'merchantService': Error creating bean with name 'merchantServiceImpl': Unsatisfied dependency expressed through field 'merchantInfoRepository': No qualifying bean of type 'com.alipay.merchant.core.service.MerchantInfoRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2026-04-25 19:42:45 INFO  traceId= org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2026-04-25 19:42:45 INFO  traceId= org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-25 19:42:45 ERROR traceId= org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field merchantInfoRepository in com.alipay.merchant.biz.service.impl.MerchantServiceImpl required a bean of type 'com.alipay.merchant.core.service.MerchantInfoRepository' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.alipay.merchant.core.service.MerchantInfoRepository' in your configuration.
+
+2026-04-25 19:43:24 INFO  traceId= com.alipay.merchant.web.Main - Starting Main using Java 21.0.9 with PID 91120 (/Users/adam/IdeaProjects/imerchant/app/web/target/classes started by adam in /Users/adam/IdeaProjects/imerchant)
+2026-04-25 19:43:24 INFO  traceId= com.alipay.merchant.web.Main - No active profile set, falling back to 1 default profile: "default"
+2026-04-25 19:43:24 WARN  traceId= org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.alipay.merchant.common.dal.auto.custom]' package. Please check your configuration.
+2026-04-25 19:43:24 WARN  traceId= org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'asyncInitMethodManager' of type [com.alipay.sofa.runtime.async.AsyncInitMethodManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [asyncProxyBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-04-25 19:43:24 INFO  traceId= org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8181 (http)
+2026-04-25 19:43:24 INFO  traceId= org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-8181"]
+2026-04-25 19:43:24 INFO  traceId= org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-25 19:43:24 INFO  traceId= org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-04-25 19:43:24 INFO  traceId= org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-25 19:43:24 INFO  traceId= org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 367 ms
+2026-04-25 19:43:25 WARN  traceId= org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ServiceFactoryBean#com.alipay.merchant.biz.service.impl.MerchantService:merchantServiceImpl': SOFA-BOOT-01-03004: Failed to resolve and active component [service:com.alipay.merchant.biz.service.impl.MerchantService]
+2026-04-25 19:43:25 INFO  traceId= org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2026-04-25 19:43:25 INFO  traceId= org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-04-25 19:43:25 ERROR traceId= org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ServiceFactoryBean#com.alipay.merchant.biz.service.impl.MerchantService:merchantServiceImpl': SOFA-BOOT-01-03004: Failed to resolve and active component [service:com.alipay.merchant.biz.service.impl.MerchantService]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1826)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:607)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1215)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1187)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350)
+	at com.alipay.merchant.web.Main.main(Main.java:14)
+Caused by: com.alipay.sofa.runtime.api.ServiceRuntimeException: SOFA-BOOT-01-03004: Failed to resolve and active component [service:com.alipay.merchant.biz.service.impl.MerchantService]
+	at com.alipay.sofa.runtime.impl.ComponentManagerImpl.doRegister(ComponentManagerImpl.java:212)
+	at com.alipay.sofa.runtime.impl.ComponentManagerImpl.register(ComponentManagerImpl.java:159)
+	at com.alipay.sofa.runtime.spring.factory.ServiceFactoryBean.afterPropertiesSet(ServiceFactoryBean.java:88)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1873)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1822)
+	... 18 common frames omitted
+2026-04-25 19:44:07 INFO  traceId= com.alipay.merchant.web.Main - Starting Main using Java 21.0.9 with PID 91692 (/Users/adam/IdeaProjects/imerchant/app/web/target/classes started by adam in /Users/adam/IdeaProjects/imerchant)
+2026-04-25 19:44:07 INFO  traceId= com.alipay.merchant.web.Main - No active profile set, falling back to 1 default profile: "default"
+2026-04-25 19:44:08 WARN  traceId= org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.alipay.merchant.common.dal.auto.custom]' package. Please check your configuration.
+2026-04-25 19:44:08 WARN  traceId= org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'asyncInitMethodManager' of type [com.alipay.sofa.runtime.async.AsyncInitMethodManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected/applied to a currently created BeanPostProcessor [asyncProxyBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies/advisors. If this bean does not have to be post-processed, declare it with ROLE_INFRASTRUCTURE.
+2026-04-25 19:44:08 INFO  traceId= org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8181 (http)
+2026-04-25 19:44:08 INFO  traceId= org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-0.0.0.0-8181"]
+2026-04-25 19:44:08 INFO  traceId= org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2026-04-25 19:44:08 INFO  traceId= org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-04-25 19:44:08 INFO  traceId= org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2026-04-25 19:44:08 INFO  traceId= org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 357 ms
+2026-04-25 19:44:08 INFO  traceId= org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-0.0.0.0-8181"]
+2026-04-25 19:44:08 INFO  traceId= org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8181 (http) with context path '/'
+2026-04-25 19:44:08 INFO  traceId= com.alipay.merchant.web.Main - Started Main in 6.104 seconds (process running for 6.33)
