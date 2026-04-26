@@ -10,7 +10,7 @@
         <relativePath>../../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>alipay_plus-biz-shared</artifactId>
+    <artifactId>merchant-biz-shared</artifactId>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>

@@ -9,8 +9,6 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-
-
         <module>app/bootstrap</module>
         <module>app/test</module>
         <module>app/web</module>
@@ -22,64 +20,73 @@
         <module>app/biz/service/impl</module>
         <module>app/core/model</module>
         <module>app/core/service</module>
-        <module>mybatis</module>
-
-
     </modules>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <ialicore.common.service.facade.version>1.0-SNAPSHOT</ialicore.common.service.facade.version>
+        <usercenter.common.service.facade.version>1.0.0.20260317.22-SNAPSHOT</usercenter.common.service.facade.version>
+        <accountcenter.common.service.facade.version>1.0.0.20260317.5-SNAPSHOT</accountcenter.common.service.facade.version>
+        <business.common.service.facade.version>1.0.0.20260317.3-SNAPSHOT</business.common.service.facade.version>
+        <merchant-common-service-facade-version>1.0.0.20260425.2-SNAPSHOT</merchant-common-service-facade-version>
+
     </properties>
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.3.2</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>com.alipay.sofa</groupId>
+        <artifactId>sofaboot-dependencies</artifactId>
+        <version>4.6.0</version>
     </parent>
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>6.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>3.3.2</version>
-        </dependency>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.ialicore.common</groupId>
+                <artifactId>service-facade</artifactId>
+                <version>${ialicore.common.service.facade.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+            </dependency>
+            <!-- MyBatis -->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>3.0.5</version>
+                <scope>test</scope>
+            </dependency>
+            <!-- MyBatis -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-aop</artifactId>
+                <version>3.3.2</version>
+            </dependency>
 
-        <dependency>
-            <groupId>com.mysql</groupId>
-            <artifactId>mysql-connector-j</artifactId>
-            <version>8.1.0</version>
-        </dependency>
+            <!-- PostgreSQL JDBC -->
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>42.7.3</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <version>3.3.2</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- MyBatis -->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>3.0.5</version>
-            <scope>test</scope>
-        </dependency>
-        <!-- MyBatis -->
+            <dependency>
+                <groupId>com.alipay</groupId>
+                <artifactId>business-common-service-facade</artifactId>
+                <version>${business.common.service.facade.version}</version>
+            </dependency>
 
-        <!-- PostgreSQL JDBC -->
-        <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.7.3</version>
-        </dependency>
+            <dependency>
+                <groupId>com.alipay</groupId>
+                <artifactId>merchant-common-service-facade</artifactId>
+                <version>${merchant.common.service.facade.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 
-    </dependencies>
+
+
+
+
+
 
     <build>
         <plugins>
@@ -97,5 +104,47 @@
             </plugin>
         </plugins>
     </build>
+    <profiles>
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <repositories>
+                <repository>
+                    <id>central</id>
+                    <url>https://repo1.maven.org/maven2/</url>
+                </repository>
 
+                <repository>
+                    <id>Alipay_Snapshots</id>
+                    <url>http://localhost:8081/repository/maven-snapshots/</url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+
+                <repository>
+                    <id>Alipay_Releases</id>
+                    <url>http://localhost:8081/repository/maven-releases/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+            <distributionManagement>
+                <repository>
+                    <id>Alipay_Releases</id>
+                    <url>http://localhost:8081/repository/maven-snapshots/</url>
+                </repository>
+            </distributionManagement>
+        </profile>
+
+    </profiles>
 </project>

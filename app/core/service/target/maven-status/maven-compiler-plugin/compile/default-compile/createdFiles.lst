@@ -1,1 +1,2 @@
-com/alipay/alipay_plus/core/service/Main.class
+com/alipay/merchant/core/service/MerchantInfoRepository.class
+com/alipay/merchant/core/service/MerchantInfoRepositoryImpl.class

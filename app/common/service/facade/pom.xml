@@ -10,7 +10,8 @@
         <relativePath>../../../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>alipay_plus-common-service-facade</artifactId>
+    <artifactId>merchant-common-service-facade</artifactId>
+    <version>${merchant-common-service-facade-version}</version>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -19,10 +20,25 @@
     </properties>
     <dependencies>
         <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+            <version>2.1.1</version>
+        </dependency>
+        <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
             <version>3.5.19</version>
             <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>javax.money</groupId>
+            <artifactId>money-api</artifactId>
+            <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.javamoney.moneta</groupId>
+            <artifactId>moneta-core</artifactId>
+            <version>1.4.4</version>
         </dependency>
     </dependencies>
     <build><plugins><plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><configuration><source>8</source><target>8</target></configuration></plugin></plugins></build>

@@ -10,12 +10,24 @@
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>alipay_plus-web</artifactId>
+    <artifactId>merchant-web</artifactId>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.adam</groupId>
+            <artifactId>merchant-biz-service-impl</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
 
 </project>

@@ -10,7 +10,7 @@
         <relativePath>../../../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>alipay_plus-biz-service-impl</artifactId>
+    <artifactId>merchant-biz-service-impl</artifactId>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -20,33 +20,130 @@
     <dependencies>
         <dependency>
             <groupId>org.adam</groupId>
-            <artifactId>alipay_plus-common-service-facade</artifactId>
+            <artifactId>business-core-model</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <!-- Source: https://mvnrepository.com/artifact/org.springframework/spring-websocket -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-websocket</artifactId>
+            <version>6.2.15</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.stripe</groupId>
+            <artifactId>stripe-java</artifactId>
+            <version>26.0.0</version> <!-- Use the latest version -->
+        </dependency>
+        <dependency>
+            <groupId>org.adam</groupId>
+            <artifactId>business-common-util</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.adam</groupId>
-            <artifactId>alipay_plus-core-model</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.adam</groupId>
-            <artifactId>alipay_plus-common-util</artifactId>
+            <artifactId>business-core-service</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>2.0.16</version>
         </dependency>
         <dependency>
             <groupId>org.adam</groupId>
-            <artifactId>alipay_plus-core-service</artifactId>
+            <artifactId>usercenter-common-service-facade</artifactId>
+            <version>${usercenter.common.service.facade.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.money</groupId>
+            <artifactId>money-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+        <!-- Source: https://mvnrepository.com/artifact/com.alipay.sofa/rpc-sofa-boot-starter -->
+        <dependency>
+            <groupId>com.alipay.sofa</groupId>
+            <artifactId>rpc-sofa-boot-starter</artifactId>
+            <version>6.0.4</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.adam</groupId>
+            <artifactId>account_center-common-service-facade</artifactId>
+            <version>${accountcenter.common.service.facade.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.adam</groupId>
+            <artifactId>business-common-service-facade</artifactId>
+            <version>${business.common.service.facade.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.adam</groupId>
+            <artifactId>business-common-service-integration</artifactId>
             <version>1.0-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
+
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>0.12.3</version>
+        </dependency>
+
+        <!-- Source: https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-impl -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <version>0.12.3</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId> <!-- needed for JSON serialization -->
+            <version>0.12.3</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.adam</groupId>
+            <artifactId>merchant-core-service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.adam</groupId>
+            <artifactId>merchant-common-util</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.adam</groupId>
+            <artifactId>merchant-common-service-facade</artifactId>
+            <version>${merchant-common-service-facade-version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+
     </dependencies>
 
 </project>

@@ -1,5 +1,5 @@
-com/alipay/alipay_plus/common/util/TenantUtil.class
-com/alipay/alipay_plus/common/util/enums/IpayTenantEnum.class
-com/alipay/alipay_plus/common/util/EventContextUtil.class
-com/alipay/alipay_plus/common/util/EventContext.class
-com/alipay/alipay_plus/common/util/LogUtil.class
+com/alipay/merchant/common/util/LogUtil.class
+com/alipay/merchant/common/util/TenantUtil.class
+com/alipay/merchant/common/util/EventContextUtil.class
+com/alipay/merchant/common/util/enums/IpayTenantEnum.class
+com/alipay/merchant/common/util/EventContext.class

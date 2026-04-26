@@ -14,19 +14,19 @@
 
         <!-- Java Model (DO) generation -->
         <javaModelGenerator
-                targetPackage="com.alipay.common.service.facade"
-                targetProject="src/main/java/com/alipay/alipay_plus/common/service/facade/auto/dataobject"/>
+                targetPackage="com.alipay.merchant.common.service.facade.auto.dataobject"
+                targetProject="src/main/java"/>
 
         <!-- Mapper XML generation -->
         <sqlMapGenerator
-                targetPackage="com.alipay.common.service.facade"
-                targetProject="src/main/resources/sqlmap/idigitalrisk/auto"/>
+                targetPackage="sqlmap.idigitalrisk.auto"
+                targetProject="src/main/resources"/>
 
         <!-- Mapper interface generation -->
         <javaClientGenerator
                 type="XMLMAPPER"
-                targetPackage="com.alipay.common.service.facade"
-                targetProject="src/main/java/com/alipay/alipay_plus/common/service/facade/auto/daointerface"/>
+                targetPackage="com.alipay.merchant.common.service.facade.auto.daointerface"
+                targetProject="src/main/java"/>
 
         <!-- Table(s) to generate -->
         <table tableName="test" domainObjectName="test" />
