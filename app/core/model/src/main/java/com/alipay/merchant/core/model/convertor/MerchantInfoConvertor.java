@@ -19,7 +19,7 @@ public class MerchantInfoConvertor {
         merchantInfoItem.setMerchantName(merchantInfo.getMerchantName());
         merchantInfoItem.setCreatedAt(merchantInfo.getCreatedAt());
         merchantInfoItem.setUpdatedAt(merchantInfo.getUpdatedAt());
-        merchantInfoItem.setMerchantType(merchantInfo.getMerchantType());
+        merchantInfoItem.setMerchantCategory(merchantInfo.getMerchantCategory());
         merchantInfoItem.setStatus(merchantInfo.getStatus());
         return merchantInfoItem;
     }
@@ -33,7 +33,7 @@ public class MerchantInfoConvertor {
         merchantInfoItem.setMerchantName(merchantInfo.getMerchantName());
         merchantInfoItem.setCreatedAt(merchantInfo.getCreatedAt());
         merchantInfoItem.setUpdatedAt(merchantInfo.getUpdatedAt());
-        merchantInfoItem.setMerchantType(merchantInfo.getMerchantType());
+        merchantInfoItem.setMerchantCategory(merchantInfo.getMerchantCategory());
         merchantInfoItem.setStatus(merchantInfo.getStatus());
         return merchantInfoItem;
     }
@@ -43,12 +43,12 @@ public class MerchantInfoConvertor {
             return null;
         }
         MerchantInfo merchantInfo = new MerchantInfo();
-        merchantInfo.setMerchantId(merchantInfo.getMerchantId());
-        merchantInfo.setMerchantName(merchantInfo.getMerchantName());
-        merchantInfo.setCreatedAt(merchantInfo.getCreatedAt());
-        merchantInfo.setUpdatedAt(merchantInfo.getUpdatedAt());
-        merchantInfo.setMerchantType(merchantInfo.getMerchantType());
-        merchantInfo.setStatus(merchantInfo.getStatus());
+        merchantInfo.setMerchantId(merchantInfoDO.getMerchantId());
+        merchantInfo.setMerchantName(merchantInfoDO.getMerchantName());
+        merchantInfo.setCreatedAt(merchantInfoDO.getCreatedAt());
+        merchantInfo.setUpdatedAt(merchantInfoDO.getUpdatedAt());
+        merchantInfo.setMerchantCategory(merchantInfoDO.getMerchantCategory());
+        merchantInfo.setStatus(merchantInfoDO.getStatus());
         return merchantInfo;
     }
 }
